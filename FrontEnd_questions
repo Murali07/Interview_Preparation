@@ -1,0 +1,62 @@
+HTML
+
+1. What is the purpose of the aria-label attribute in HTML?
+
+The `aria-label` attribute in HTML is used to provide an accessible name for an element, which is especially useful for screen readers. 
+It labels elements with text that isn't visible on the screen, improving accessibility for users with disabilities. 
+For example, it's commonly used on icon-only buttons to describe their function.
+
+2. Describe the difference between a div and a span in HTML.
+
+3. What is the difference between client-side and server-side rendering?
+
+4. What is Data attributes?
+
+5. Can you explain the purpose of the <!DOCTYPE> declaration at the begining of an HTML document?
+
+
+******************************************************************
+
+CSS
+
+1. How do you debug CSS code?
+
+2. Describe the difference between specificity and inheritance in CSS. 
+
+3. How do you create a smooth scrolling effect using CSS?
+
+4. What is the CSS box model?
+
+5. What is the purpose of the clearfix hack in CSS?
+
+******************************************************************
+
+JavaScript
+
+1. What is memoization? Explain it with example.
+
+2. What is object destructuring?
+
+3. How to handle exceptions/errors in JavaScript?
+
+4. What is Throttling?
+
+5. Explain about event propagation.
+
+6. What is event loop?
+
+7. What is closures?
+
+8. What is Hoisting?
+
+******************************************************************
+
+React
+
+1. Explain the difference between a class and fucntional components in React?
+
+2. What is virtual DOM in React?
+
+3. Explain the scenario when you use Redux.                               
+
+
