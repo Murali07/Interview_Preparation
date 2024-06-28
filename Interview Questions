@@ -80,6 +80,70 @@ output:
   }
 ]
 
+4. $sort: It used to sort(order) the documents.
+
+db.users.aggregate([
+    { $sort: { age: 1 } }
+])
+
+output:
+
+[
+  {
+    _id: ObjectId('60a3c7e96e06f64fb5ac0702'),
+    name: 'Charlie',
+    age: 25,
+    email: 'charlie@example.com',
+    city: 'Chicago'
+  },
+  {
+    _id: ObjectId('60a3c7e96e06f64fb5ac0700'),
+    name: 'Alice',
+    age: 30,
+    email: 'alice@example.com',
+    city: 'New York'
+  },
+  {
+    _id: ObjectId('60a3c7e96e06f64fb5ac0701'),
+    name: 'Bob',
+    age: 35,
+    email: 'bob@example.com',
+    city: 'Los Angeles'
+  }
+]
+
+5. $limit: limit the number of documents passed to the next stage.
+
+db.users.aggregate([
+    { $limit: 2 }
+])
+
+output:
+
+[
+  {
+    _id: ObjectId('60a3c7e96e06f64fb5ac0700'),
+    name: 'Alice',
+    age: 30,
+    email: 'alice@example.com',
+    city: 'New York'
+  },
+  {
+    _id: ObjectId('60a3c7e96e06f64fb5ac0701'),
+    name: 'Bob',
+    age: 35,
+    email: 'bob@example.com',
+    city: 'Los Angeles'
+  }
+]
+
+6. $skip: skips a specified number of documents in the pipeline.
+
+db.orders.aggregate([
+    { $skip: 5 }
+])
+
+output:
 
 
 
