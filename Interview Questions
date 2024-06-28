@@ -178,7 +178,7 @@ db.orders.aggregate([
     { $unwind: "$items" }
 ])
 
-
+_______________________________________________________________________________________________________________________________________
 
 2. What is the difference between normal query and aggregate query?
 
@@ -247,7 +247,11 @@ Flexibility:
 Normal Query: Limited flexibility in data manipulation.
 Aggregate Query: Highly flexible, allowing complex data transformations.
 
+_______________________________________________________________________________________________________________________________________
+
 3. In React Auto completion functionality, auto search we just type 2 or 3 letter and multiple suggestions comes up. How we can achieve this?
+
+_______________________________________________________________________________________________________________________________________
 
 4. Sorting the array of elements without using inbuilt methods?
 
@@ -277,7 +281,7 @@ Quick sort
 Quick Sort is an efficient, comparison-based, divide and conquer sorting algorithm. 
 It works by selecting a 'pivot' element from the array and partitioning the other elements into two sub-arrays, according to whether they are less than or greater than the pivot.
 
-<br />
+_______________________________________________________________________________________________________________________________________
 
 5. Any other method for better performance of sorting?
 
@@ -299,16 +303,26 @@ in Python’s built-in sort() and sorted() functions, and also in Java’s Array
 
 Time Complexity: O(n log n) in the worst case, but performs better on many real-world data sets.
 
+_______________________________________________________________________________________________________________________________________
+
 6. String interpolation and serialization in JavaScript
+
+
+_______________________________________________________________________________________________________________________________________
 
 7. In HTML what is block elements and inline elements?
 
+_______________________________________________________________________________________________________________________________________
+
 8. ContextAPI?
+
+
+_______________________________________________________________________________________________________________________________________
 
 9. What is Lazy loading and why will you use?
 
 
-_______________________________
+_______________________________________________________________________________________________________________________________________
 Pattern:
 
 module design pattern
