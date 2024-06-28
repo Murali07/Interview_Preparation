@@ -251,6 +251,34 @@ Aggregate Query: Highly flexible, allowing complex data transformations.
 
 4. Sorting the array of elements without using inbuilt methods?
 
+We can implement various sorting algorithms to sort an array of elements without using built-in methods.
+
+Bubble sort
+
+Bubble Sort is a simple algorithm that repeatedly steps through the list, compares adjacent elements, 
+and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted.
+
+Selection sort
+
+Selection Sort works by dividing the input list into two parts: a sorted sublist of items which is built up from left to right at the front (left) of the list and a sublist of the remaining unsorted items. 
+The algorithm proceeds by finding the smallest (or largest, depending on sorting order) element from the unsorted sublist, swapping it with the leftmost unsorted element, and moving the sublist boundaries one element to the right.
+
+Insertion sort
+
+Insertion Sort works by taking elements from the unsorted part of the list and inserting them into the correct position in the sorted part of the list.
+
+Merge sort
+
+Merge Sort is an efficient, stable, comparison-based, divide and conquer sorting algorithm. 
+Most implementations produce a stable sort, meaning that the implementation preserves the input order of equal elements in the sorted output.
+
+Quick sort
+
+Quick Sort is an efficient, comparison-based, divide and conquer sorting algorithm. 
+It works by selecting a 'pivot' element from the array and partitioning the other elements into two sub-arrays, according to whether they are less than or greater than the pivot.
+
+<br />
+
 5. Any other method for better performance of sorting?
 
 Yes, for better performance in sorting, you can consider using advanced algorithms like Heap Sort and Tim Sort. 
