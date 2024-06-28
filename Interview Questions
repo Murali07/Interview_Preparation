@@ -1,5 +1,88 @@
 1. What is aggregate query in MongoDB?
 
+Ans:
+
+MongoDB Aggregation is a database process that allows us to perform complex data transformations and 
+computations on collections of documents.
+It enables us to group, filter and manipulate data to produce summarized results. 
+MongoDB Aggregation is typically carried out using the aggregation pipeline, which is a framework for data processing pipelines. 
+Each stage of the pipeline transforms the documents as they pass through it and allowing for operations like 
+filtering, sorting, reshaping and performing calculations on the data.
+
+Aggregation pipeline methods:
+
+Users Collection:
+
+{
+  "_id": ObjectId("60a3c7e96e06f64fb5ac0700"),
+  "name": "Alice",
+  "age": 30,
+  "email": "alice@example.com",
+  "city": "New York"
+}
+{
+  "_id": ObjectId("60a3c7e96e06f64fb5ac0701"),
+  "name": "Bob",
+  "age": 35,
+  "email": "bob@example.com",
+  "city": "Los Angeles"
+}
+{
+  "_id": ObjectId("60a3c7e96e06f64fb5ac0702"),
+  "name": "Charlie",
+  "age": 25,
+  "email": "charlie@example.com",
+  "city": "Chicago"
+}
+
+1. $group:
+
+db.users.aggregate([
+   { $group: { _id: "$city", averageAge: {$avg: "$age"}}}
+])
+
+output:
+[
+ { _id: 'New York', averageAge: 30 },
+ { _id: 'Chicago', averageAge: 25 },
+ {_id: 'Los Angeles', averageAge: 35 }
+]
+
+2. $project: Include or exclude fields from the output documents.
+
+db.users.aggregate([
+   { $project: { name: 1, city: 1, _id: 0 } }
+])
+
+output: 
+
+[
+  { name: 'Alice', city: 'New York' },
+  { name: 'Bob', city: 'Los Angeles' },
+  { name: 'Charlie', city: 'Chicago' }
+]
+
+3. $match: Filter documents to pass only those that match the specified conditions.
+
+db.users.aggregate([
+   { $match: { age: { $gt: 30 } } }
+])
+
+output:
+
+[
+  {
+    _id: ObjectId('60a3c7e96e06f64fb5ac0701'),
+    name: 'Bob',
+    age: 35,
+    email: 'bob@example.com',
+    city: 'Los Angeles'
+  }
+]
+
+
+
+
 2. What is the difference between normal query and aggregate query?
 
 3. In React Auto completion functionality, auto search we just type 2 or 3 letter and multiple suggestions comes up. How we can achieve this?
@@ -23,3 +106,25 @@ Pattern:
 module design pattern
 MVC pattern
 nvm pattern
+
+_______________________________
+Find the output of the below code.
+
+let x = null;
+
+console.log(typeof x) // output: object
+
+
+let x = undefined;
+
+console.log(typeof x) // output: undefined
+
+let x = "Hello";
+
+console.log(typeof(typeof x)) // output: string
+
+
+let x = 20;
+
+console.log(typeof(typeof x)) // output: string
+_______________________________
